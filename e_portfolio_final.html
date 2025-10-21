@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio Maëlys Carteau</title>
+    <link href="style_final.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style></style>-->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="photo" alt="photo de profil" src="C:/Users/pares/Documents/Maëlys/Cours/ENSEEIHT/CAM/E-portfolio" height="200">
+            <h1>Maëlys CARTEAU</h1>
+            <p>Etudiante à l'ENSEEIHT - filière sciences du numérique</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="C:/Users/pares/Documents/Maëlys/Cours/ENSEEIHT/CAM/E-portfolio/index.html">Home</a></li>
+                <li><a href="#video.html">Vidéo</a></li>
+                <li><a href="#cv.html">CV</a></li>
+                
+                <li><a href="#contact">Contact</a></li>
+
+
+                <li><a href="#Engineering">Engineering Courses</a></li>
+                <li><a href="#Mobility">Mobility</a></li>
+                <li><a href="#Civic">Civic engagement</a></li>
+                <li><a href="#Sports&activities">Sports & activities</a></li>
+                <li><a href="#CareerDevelopment">Career Development</a></li>
+            </ul>
+        </nav>
+
+        <footer id="contact">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        maelys.carteau@gmail.com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Téléphone</strong><br>
+                        +33 7 68 99 28 40
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Localisation</strong><br>
+                        Toulouse, France
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation douce
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+            this.reset();
+        });
+
+        // Animation au scroll
+        const sections = document.querySelectorAll('section, footer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
