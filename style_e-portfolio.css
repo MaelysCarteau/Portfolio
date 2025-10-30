@@ -281,12 +281,25 @@ p {
   background: #f8fafc;
 }
 
-.link-card i {
-  font-size: 2rem;
-  color: #0ea5e9;
-  background: rgba(14,165,233,0.1);
+/* Logo (SVG) dans les cards de liens */
+.link-card .logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: rgba(14,165,233,0.08); /* léger fond */
   border-radius: 10px;
-  padding: 0.6rem;
+  padding: 8px;
+  color: #0ea5e9; /* couleur du SVG via fill="currentColor" */
+  flex-shrink: 0;
+}
+
+.link-card .logo svg {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 .link-card strong {
