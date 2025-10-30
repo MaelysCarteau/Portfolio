@@ -281,6 +281,25 @@ p {
   background: #f8fafc;
 }
 
+/* Carte spécifique pour la vidéo de présentation */
+.video-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc; /* même fond que les autres cartes */
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.presentation-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  display: block;
+}
+
 /* Logo (SVG) dans les cards de liens */
 .link-card .logo {
   display: inline-flex;
@@ -316,6 +335,7 @@ p {
   text-decoration: underline;
 }
 
+/*
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -334,7 +354,9 @@ p {
     height: 100%;
     border-radius: 8px;
 }
+*/
 
+/*
 .btn {
     display: inline-flex;
     align-items: center;
@@ -358,7 +380,9 @@ p {
 .btn i {
     font-size: 1.1rem;
 }
+*/
 
+/*
 .linkedin-btn {
     background: linear-gradient(135deg, #0077b5, #005885);
     box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
@@ -367,6 +391,7 @@ p {
 .linkedin-btn:hover {
     box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
 }
+*/
 
 .activities-grid {
     display: grid;
