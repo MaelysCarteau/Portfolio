@@ -14,6 +14,11 @@
                 <h1>Maëlys CARTEAU</h1>
                 <p>Étudiante à l'ENSEEIHT - filière sciences du numérique</p>
             </div>
+
+            <div class="lang-switch">
+                <button id="lang-btn">🇫🇷 FR</button>
+            </div>
+
         </header>
 
         <nav>
@@ -56,19 +61,56 @@
         <div class="content-wrapper">
             <section id="home">
                 <h2><i class="fas fa-user"></i> Présentation</h2>
-                <p>
-                    Bonjour et bienvenue sur mon e-portfolio ! Après avoir étudié pendant deux ans dans une classe préparatoire 
-                    aux grandes écoles à Nîmes, je suis fière d'avoir intégré l'ENSEEIHT, une école d'ingénieurs située à Toulouse, 
-                    pour la rentrée 2025.
-                </p>
-                <p>
-                    Ce portfolio présente mon travail, mes réalisations et mes aspirations professionnelles. 
-                    N'hésitez pas à explorer les différentes sections et à me contacter pour toute opportunité.
-                </p>
-                <a href="https://www.linkedin.com/in/ma%C3%ABlys-carteau-a88b11345" target="_blank" class="btn linkedin-btn">
-                    <i class="fab fa-linkedin"></i> Voir mon profil LinkedIn
-                </a>
+                
+                <div class="home-grid">
+                    <div class="card main-card">
+                        <h3>Salut, je suis Maëlys 👋</h3>
+                        <p>
+                            Bonjour et bienvenue sur mon e-portfolio ! Après avoir étudié pendant deux ans dans une classe préparatoire 
+                            aux grandes écoles à Nîmes, je suis fière d'avoir intégré l'ENSEEIHT, une école d'ingénieurs située à Toulouse, 
+                            pour la rentrée 2025.
+                        </p>
+                        <p>
+                            Ce portfolio présente mon travail, mes réalisations et mes aspirations professionnelles. 
+                            N'hésitez pas à explorer les différentes sections et à me contacter pour toute opportunité.
+                        </p>
+                    </div>
+
+                    <div class="card link-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong><br>
+                            <a href="https://www.linkedin.com/in/ma%C3%ABlys-carteau-a88b11345" target="_blank">Voir mon profil</a>
+                        </div>
+                    </div>
+
+                    <div class="card link-card">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong><br>
+                            <a href="#">16 commits récents</a>
+                        </div>
+                    </div>
+
+                    <div class="card link-card">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <strong>CV</strong><br>
+                            <a href="cv.pdf" download>Télécharger mon CV</a>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+
+
+
+
+
+
+
+
+
 
             <section id="EngineeringCourse">
                 <h2><i class="fas fa-projects"></i> Engineering Course</h2>
@@ -80,29 +122,26 @@
                 <div id="productions">
                     <h3>Productions</h3>
                 </div>
-
             </section>
 
-            <section id="video">
-                <h2><i class="fas fa-video"></i> Ma Vidéo de Présentation</h2>
-                <div class="video-container">
-                    <video controls>
-                        <source src="votre-video.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
+            <section id="InternationalMobility">
+                <h2><i class="fas fa-projects"></i> International Mobility</h2>
+                
+                <div id="PCE">
+                    <h3>PCE</h3>
+                </div>
+
+                <div id="LV2">
+                    <h3>LV2</h3>
                 </div>
             </section>
 
-            <section id="cv">
-                <h2><i class="fas fa-file-alt"></i> Mon CV</h2>
-                <p>Découvrez mon parcours académique et professionnel en téléchargeant mon CV.</p>
-                <a href="cv.pdf" download="cv.pdf" class="btn">
-                    <i class="fas fa-download"></i> Télécharger mon CV (PDF)
-                </a>
+            <section id="SustainabilityCivicEngagement">
+                <h2><i class="fas fa-projects"></i> Sustainability & Civic Engagement</h2>
             </section>
 
             <section id="sports">
-                <h2><i class="fas fa-fire"></i> Sports & Activités</h2>
+                <h2><i class="fas fa-fire"></i> Sports & Activities</h2>
                 
                 <div class="activities-grid">
                     <div class="activity-card">
@@ -130,6 +169,36 @@
                         </ul>
                     </div>
                 </div>
+            </section>
+
+            <section id="CareerDevelopment">
+                <h2><i class="fas fa-career"></i> Career Development</h2>
+                
+                <div id="Internships">
+                    <h3>Internships</h3>
+                </div>
+
+                <div id="PPE">
+                    <h3>PPE</h3>
+                </div>
+            </section>
+
+            <section id="video">
+                <h2><i class="fas fa-video"></i> Ma Vidéo de Présentation</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="votre-video.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+            </section>
+
+            <section id="cv">
+                <h2><i class="fas fa-file-alt"></i> Mon CV</h2>
+                <p>Découvrez mon parcours académique et professionnel en téléchargeant mon CV.</p>
+                <a href="cv.pdf" download="cv.pdf" class="btn">
+                    <i class="fas fa-download"></i> Télécharger mon CV (PDF)
+                </a>
             </section>
         </div>
 
@@ -160,5 +229,65 @@
             </div>
         </footer>
     </div>
+<script>
+    const langBtn = document.getElementById('lang-btn');
+    let currentLang = 'fr';
+
+    langBtn.addEventListener('click', () => {
+    if (currentLang === 'fr') {
+        translateToEnglish();
+        langBtn.textContent = '🇬🇧 EN';
+        currentLang = 'en';
+    } else {
+        translateToFrench();
+        langBtn.textContent = '🇫🇷 FR';
+        currentLang = 'fr';
+    }
+    });
+
+    // ---- Traductions ----
+    function translateToEnglish() {
+    document.title = "E-Portfolio Maëlys Carteau";
+
+    // Titres
+    document.querySelector('#home h2').innerHTML = '<i class="fas fa-user"></i> Presentation';
+    document.querySelector('#video h2').innerHTML = '<i class="fas fa-video"></i> Introduction Video';
+    document.querySelector('#cv h2').innerHTML = '<i class="fas fa-file-alt"></i> My Resume';
+    document.querySelector('#sports h2').innerHTML = '<i class="fas fa-fire"></i> Sports & Activities';
+    document.querySelector('#contact h2').innerHTML = '<i class="fas fa-envelope"></i> Contact';
+
+    // Contenu
+    document.querySelector('#home p').textContent =
+        "Hello and welcome to my e-portfolio! After two years of preparatory classes in Nîmes, I am proud to have joined ENSEEIHT, a French engineering school in Toulouse, for the 2025 intake.";
+
+    document.querySelector('#cv p').textContent =
+        "Discover my academic and professional background by downloading my resume.";
+    document.querySelector('#cv a').innerHTML =
+        '<i class="fas fa-download"></i> Download my Resume (PDF)';
+
+    document.querySelector('#sports p')?.remove(); // just in case there's text
+    }
+
+    function translateToFrench() {
+    document.title = "E-Portfolio Maëlys Carteau";
+
+    // Titres
+    document.querySelector('#home h2').innerHTML = '<i class="fas fa-user"></i> Présentation';
+    document.querySelector('#video h2').innerHTML = '<i class="fas fa-video"></i> Ma Vidéo de Présentation';
+    document.querySelector('#cv h2').innerHTML = '<i class="fas fa-file-alt"></i> Mon CV';
+    document.querySelector('#sports h2').innerHTML = '<i class="fas fa-fire"></i> Sports & Activités';
+    document.querySelector('#contact h2').innerHTML = '<i class="fas fa-envelope"></i> Contact';
+
+    // Contenu
+    document.querySelector('#home p').textContent =
+        "Bonjour et bienvenue sur mon e-portfolio ! Après avoir étudié pendant deux ans en classe préparatoire à Nîmes, je suis fière d'avoir intégré l'ENSEEIHT, une école d'ingénieurs située à Toulouse, pour la rentrée 2025.";
+
+    document.querySelector('#cv p').textContent =
+        "Découvrez mon parcours académique et professionnel en téléchargeant mon CV.";
+    document.querySelector('#cv a').innerHTML =
+        '<i class="fas fa-download"></i> Télécharger mon CV (PDF)';
+    }
+</script>
+
 </body>
 </html>
