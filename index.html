@@ -10,9 +10,9 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <img class="photo" alt="photo de profil" src="https://via.placeholder.com/150" height="150">
+                <img class="photo" alt="photo de profil" src="photo_profil.png" height="150">
                 <h1>Maëlys CARTEAU</h1>
-                <p>Student at ENSEEIHT - digital sciences program</p>
+                <p data-i18n="home_intro_subtitle">Student at ENSEEIHT - digital sciences program</p>
             </div>
 
             <div class="lang-switch">
@@ -23,34 +23,33 @@
 
         <nav>
             <ul>
-                <li><a href="#sports" class="menu-item"><i class="fas fa-dumbbell"></i> Sports & Activities</a></li>
-
-                <li><a href="#home" class="menu-item"><i class="fas fa-home"></i> Home ▾</a></li> 
+                <li><a href="#home" class="menu-item" data-i18n="nav_home"><i class="fas fa-home"></i> <span data-i18n="nav_home">Home</span></a></li>
+                <li><a href="#sports" class="menu-item" data-i18n="nav_sports"><i class="fas fa-dumbbell"></i> Sports & Activities</a></li> 
                 
                 <li class="dropdown">
-                    <a href="#EngineeringCourse" class="menu-item"><i class="fas fa-Engineering"></i> Engineering Course ▾</a>
+                    <a href="#EngineeringCourse" class="menu-item"><i class="fas fa-Engineering"></i> <span data-i18n="nav_engineering">Engineering Course</span> ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#Projects">Projects</a></li>
-                        <li><a href="#Productions">Productions</a></li>
+                        <li><a href="#Projects" data-i18n="nav_projects">Projects</a></li>
+                        <li><a href="#Productions" data-i18n="nav_productions">Productions</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#InternationalMobility" class="menu-item"><i class="fas fa-International"></i> International Mobility ▾</a>
+                    <a href="#InternationalMobility" class="menu-item"><i class="fas fa-International"></i> <span data-i18n="nav_mobility">International Mobility</span> ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#PCE">PCE</a></li>
-                        <li><a href="#LV2">LV2</a></li>
+                        <li><a href="#PCE" data-i18n="nav_pce">PCE</a></li>
+                        <li><a href="#LV2" data-i18n="nav_lv2">LV2</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#SustainabilityCivicEngagement" class="menu-item"><i class="fas fa-Sustainability"></i> Sustainability & Civic Engagement</a></li>
-                <li><a href="#SportActivities" class="menu-item"><i class="fas fa-Sport"></i> Sport & Others activities</a></li>
+                <li><a href="#SustainabilityCivicEngagement" class="menu-item" data-i18n="nav_sustainability"><i class="fas fa-Sustainability"></i> Sustainability & Civic Engagement</a></li>
+                <li><a href="#SportActivities" class="menu-item" data-i18n="nav_sports"><i class="fas fa-Sport"></i> Sport & Others activities</a></li>
                 
                 <li class="dropdown">
-                    <a href="#CareerDevelopment" class="menu-item"><i class="fas fa-Career"></i> Career Development ▾</a>
+                    <a href="#CareerDevelopment" class="menu-item"><i class="fas fa-Career"></i> <span data-i18n="nav_career">Career Development</span> ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#Internships">Internships</a></li>
-                        <li><a href="#PEP">PEP</a></li>
+                        <li><a href="#Internships" data-i18n="nav_internships">Internships</a></li>
+                        <li><a href="#PEP" data-i18n="nav_pep">PEP</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,17 +57,17 @@
 
         <div class="content-wrapper">
             <section id="home">
-                <h2><i class="fas fa-user"></i> Presentation</h2>
+                <h2 data-i18n="home_title"><i class="fas fa-user"></i> Presentation</h2>
                 
                 <div class="home-grid">
                     <div class="card main-card">
-                        <h3>Salut, je suis Maëlys 👋</h3>
-                        <p>
+                        <h3 data-i18n="home_title_intro">Hi, my name is Maëlys</h3>
+                        <p data-i18n="home_intro">
                             Hello and welcome to my e-portfolio! After studying for two years in a preparatory class for 
                             the Grandes Écoles in Nîmes, I am proud to have joined ENSEEIHT, an engineering school 
                             located in Toulouse, for the start of the 2025 academic year.
                         </p>
-                        <p>
+                        <p data-i18n="home_intro2">
                             This portfolio showcases my work, achievements, and professional aspirations. Feel free 
                             to explore the different sections and contact me for any opportunities.
                         </p>
@@ -84,7 +83,7 @@
                         </span>
                         <div>
                             <strong>LinkedIn</strong><br>
-                            <a href="https://www.linkedin.com/in/ma%C3%ABlys-carteau-a88b11345" target="_blank" rel="noopener">View my profile</a>
+                            <a href="https://www.linkedin.com/in/ma%C3%ABlys-carteau-a88b11345" target="_blank" rel="noopener"> <span data-i18n="linkedin_link">View my profile</span> </a>
                         </div>
                     </div>
 
@@ -98,7 +97,7 @@
                         </span>
                         <div>
                             <strong>GitHub</strong><br>
-                            <a href="#" rel="noopener">16 recent commits</a>
+                            <a href="#" rel="noopener"><span data-i18n="github_link">16 recent commits</span> </a>
                         </div>
                     </div>
 
@@ -112,7 +111,7 @@
                         </span>
                         <div>
                             <strong>CV</strong><br>
-                            <a href="cv.pdf" download rel="noopener">Download my CV</a>
+                            <a href="cv.pdf" download rel="noopener"><span data-i18n="cv_link">Download my CV</span></a>
                         </div>
                     </div>
 
@@ -120,7 +119,7 @@
                     <div class="card video-card">
                         <video controls poster="media/preview.jpg" class="presentation-video">
                             <source src="Elevator_speech.mp4" type="video/mp4">
-                            Your browser does not support video playback.
+                            <span data-i18n="video_error">Your browser does not support video playback.</span>
                         </video>
                     </div>
 
@@ -128,73 +127,73 @@
             </section>
 
             <section id="EngineeringCourse">
-                <h2><i class="fas fa-projects"></i> Engineering Course</h2>
+                <h2 data-i18n="engineering_title"><i class="fas fa-projects"></i> Engineering Course</h2>
                 
                 <div id="projects">
-                    <h3>Projects</h3>
+                    <h3 data-i18n="projects_title">Projects</h3>
                 </div>
 
                 <div id="productions">
-                    <h3>Productions</h3>
+                    <h3 data-i18n="productions_title">Productions</h3>
                 </div>
             </section>
 
             <section id="InternationalMobility">
-                <h2><i class="fas fa-projects"></i> International Mobility</h2>
+                <h2 data-i18n="mobility_title"><i class="fas fa-projects"></i> International Mobility</h2>
                 
                 <div id="PCE">
-                    <h3>PCE</h3>
+                    <h3 data-i18n="pce_title">PCE</h3>
                 </div>
 
                 <div id="LV2">
-                    <h3>LV2</h3>
+                    <h3 data-i18n="lv2_title">LV2</h3>
                 </div>
             </section>
 
             <section id="SustainabilityCivicEngagement">
-                <h2><i class="fas fa-projects"></i> Sustainability & Civic Engagement</h2>
+                <h2 data-i18n="sustainability_title"><i class="fas fa-projects"></i> Sustainability & Civic Engagement</h2>
             </section>
 
             <section id="sports">
-                <h2><i class="fas fa-fire"></i> Sports & Activities</h2>
+                <h2 data-i18n="sports_title"><i class="fas fa-fire"></i> Sports & Activities</h2>
                 
                 <div class="activities-grid">
                     <div class="activity-card">
                         <h3><i class="fas fa-dumbbell"></i> Sports</h3>
                         <ul class="activity-list">
-                            <li>Self-defense <span class="activity-duration">(2 years, 2021-2023)</span></li>
-                            <li>MMA, combat sport <span class="activity-duration">(1 year, 2021-2022)</span></li>
-                            <li>Dance <span class="activity-duration">(8 years, discontinued in 2020)</span></li>
+                            <li><span data-i18n="self_defense">Self-defense</span> <span class="activity-duration" data-i18n="year_self">(2 years, 2021-2023)</span></li>
+                            <li>MMA <span class="activity-duration" data-i18n="year_mma">(1 year, 2021-2022)</span></li>
+                            <li><span data-i18n="dance">Dance</span> <span class="activity-duration" data-i18n="year_dance">(8 years, discontinued in 2020)</span></li>
                         </ul>
                     </div>
 
                     <div class="activity-card">
-                        <h3><i class="fas fa-music"></i> Music</h3>
+                        <h3 data-i18n="music"><i class="fas fa-music"></i> Music</h3>
                         <ul class="activity-list">
-                            <li>Transverse flute <span class="activity-duration">(12 years)</span></li>
-                            <li>Club Trous Balourds <span class="activity-duration">ENSEEIHT Brass Band</span></li>
+                            <li><span data-i18n="transverse_flute">Transverse flute</span> <span class="activity-duration" data-i18n="year_flute">(12 years)</span></li>
+                            <li>Club Trous Balourds <span class="activity-duration" data-i18n="fanfare">ENSEEIHT Brass Band</span></li>
                         </ul>
                     </div>
 
                     <div class="activity-card">
                         <h3><i class="fas fa-users"></i> Clubs & Associations</h3>
                         <ul class="activity-list">
-                            <li>Club TVn7 <span class="activity-duration">Editing, camera, lighting, sound</span></li>
-                            <li>Club Improbables <span class="activity-duration">Theatrical improvisation</span></li>
+                            <li>Club TVn7 <span class="activity-duration" data-i18n="club_tv">Editing, camera, lighting, sound</span></li>
+                            <li>Club Improbables <span class="activity-duration" data-i18n="club_improbables">Theatrical improvisation</span></li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <section id="CareerDevelopment">
-                <h2><i class="fas fa-career"></i> Career Development</h2>
+                <h2 data-i18n="nav_career"><i class="fas fa-career"></i> Career Development</h2>
                 
                 <div id="Internships">
-                    <h3>Internships</h3>
+                    <h3 data-i18n="nav_internships">Internships</h3>
                 </div>
 
                 <div id="PPE">
-                    <h3>PPE</h3>
+                    <h3 data-i18n="nav_pep">PPE</h3>
                 </div>
             </section>
         </div>
@@ -212,7 +211,7 @@
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <div>
-                        <strong>Phone</strong><br>
+                        <strong><span data-i18n="phone">Phone</span></strong><br>
                         +33 7 68 99 28 40
                     </div>
                 </div>
@@ -229,6 +228,7 @@
 <script>
 const translations = {
   en: {
+    "home_intro_subtitle": "Student at ENSEEIHT - digital sciences program",
     "nav_home": "Home",
     "nav_engineering": "Engineering Course",
     "nav_projects": "Projects",
@@ -242,6 +242,7 @@ const translations = {
     "nav_pep": "PEP",
     "nav_sports": "Sports & Activities",
     "home_title": "Presentation",
+    "home_title_intro": "Hi, my name is Maëlys",
     "home_intro": "Hello and welcome to my e-portfolio! After studying for two years in a preparatory class in Nîmes, I am proud to have joined ENSEEIHT, an engineering school located in Toulouse, for the 2025 academic year.",
     "home_intro2": "This portfolio showcases my work, achievements, and professional aspirations. Feel free to explore the different sections and contact me for any opportunities.",
     "engineering_title": "Engineering Course",
@@ -265,9 +266,23 @@ const translations = {
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
-    "location_value": "Toulouse, France"
+    "location_value": "Toulouse, France",
+    "video_error" : "Your browser does not support video playback.",
+    "year_self": "(2 years, 2021-2023)",
+    "year_mma": "(1 year, 2021-2022)",
+    "year_dance": "(8 years, discontinued in 2020)",
+    "self_defense": "self-defense",
+    "dance": "dance",
+    "music": "music",
+    "transverse_flute": "Transverse flute",
+    "year_flute": "(12 years)",
+    "fanfare": "ENSEEIHT Brass Band",
+    "club_tv": "Editing, camera, lighting, sound",
+    "club_improbables": "Theatrical improvisation",
+    "phone": "phone"
   },
   fr: {
+    "home_intro_subtitle": "Étudiante à l’ENSEEIHT - Filière sciences du numérique",
     "nav_home": "Accueil",
     "nav_engineering": "Cursus d’ingénierie",
     "nav_projects": "Projets",
@@ -281,8 +296,9 @@ const translations = {
     "nav_pep": "PPE",
     "nav_sports": "Sports & Activités",
     "home_title": "Présentation",
-    "home_intro": "Bonjour et bienvenue sur mon e-portfolio ! Après avoir étudié pendant deux ans en classe préparatoire à Nîmes, je suis fière d’avoir intégré l’ENSEEIHT, une école d’ingénieurs située à Toulouse, pour la rentrée 2025.",
-    "home_intro2": "Ce portfolio présente mes travaux, mes réalisations et mes aspirations professionnelles. N’hésitez pas à parcourir les différentes sections et à me contacter pour toute opportunité.",
+    "home_title_intro": "Salut, je suis Maëlys",
+    "home_intro": "Bonjour et bienvenue sur mon e-portfolio ! Après deux années de classe préparatoire à Nîmes, je suis fière d’avoir intégré l’ENSEEIHT, une école d’ingénieurs située à Toulouse, pour la rentrée 2025.",
+    "home_intro2": "Ce portfolio présente mes travaux, mes réalisations et mes aspirations professionnelles. N’hésitez pas à explorer les différentes sections et à me contacter pour toute opportunité.",
     "engineering_title": "Cursus d’ingénierie",
     "projects_title": "Projets",
     "productions_title": "Productions",
@@ -304,7 +320,20 @@ const translations = {
     "email": "E-mail",
     "phone": "Téléphone",
     "location": "Localisation",
-    "location_value": "Toulouse, France"
+    "location_value": "Toulouse, France",
+    "video_error" : "Votre navigateur ne prend pas en charge la lecture vidéo.",
+    "year_self": "(2 années, 2021-2023)",
+    "year_mma": "(1 année, 2021-2022)",
+    "year_dance": "(8 années, arrêt en 2020)",
+    "self_defense": "self-défense",
+    "dance": "danse",
+    "music": "Musique",
+    "transverse_flute": "Flûte traversière",
+    "year_flute": "(12 années)",
+    "fanfare": "Fanfare de l'ENSEEIHT",
+    "club_tv": "Montage, caméra, éclairage, son",
+    "club_improbables": "Improvisation théâtrale",
+    "phone": "Téléphone"
   }
 };
 
