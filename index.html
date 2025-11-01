@@ -25,6 +25,10 @@
 
         </header>
 
+        <button class="menu-toggle" aria-label="Menu">
+            ☰
+        </button>
+
         <nav>
             <ul>
                 <li><a href="#home" class="menu-item" data-i18n="nav_home"><i class="fas fa-home"></i> <span data-i18n="nav_home">Home</span></a></li>
@@ -371,6 +375,14 @@ langToggle.addEventListener("click", () => {
     langToggle.classList.add("en");
   }
   applyTranslations(currentLang);
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  
+});
 });
 </script>
 </body>

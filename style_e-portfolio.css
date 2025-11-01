@@ -575,3 +575,229 @@ footer h2 {
         padding: 1rem;
     }
 }
+
+/* Bouton hamburger */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.5rem;
+  z-index: 2000;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Affiché seulement sur mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+}
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Toggle langue */
+    .lang-switch {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .lang-toggle {
+        width: 80px;
+        height: 36px;
+    }
+
+    .lang-slider {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Navigation mobile avec menu hamburger */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    nav a {
+        padding: 1rem;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Dropdown sur mobile - au clic plutôt que hover */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background: #f8fafc;
+        padding-left: 1rem;
+    }
+
+    .dropdown-menu li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Toggle dropdown sur mobile */
+    .dropdown > a::after {
+        content: "▼";
+        font-size: 0.8rem;
+        transition: transform 0.3s;
+    }
+
+    .dropdown.active > a::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown .dropdown-menu {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+        max-height: 500px;
+    }
+
+    /* Sections */
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h2 i {
+        font-size: 1.3rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+    }
+
+    /* Home grid */
+    .home-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .main-card {
+        grid-column: span 1;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+
+    /* Activities grid */
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .activity-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .activity-card h3 i {
+        min-width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    /* Contact */
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    /* Video */
+    .presentation-video {
+        max-width: 100%;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .link-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lang-toggle {
+        width: 70px;
+        height: 32px;
+    }
+
+    .lang-slider {
+        width: 24px;
+        height: 24px;
+    }
+
+    .lang-label {
+        font-size: 1rem;
+    }
+}
