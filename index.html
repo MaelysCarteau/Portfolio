@@ -16,15 +16,18 @@
             </div>
 
             <div class="lang-switch">
-                <button id="lang-btn">🇫🇷 FR</button>
-            </div>
+                <div id="lang-toggle" class="lang-toggle">
+                    <div class="lang-slider"></div>
+                        <span class="lang-label fr">🇫🇷</span>
+                        <span class="lang-label en">🇬🇧</span>
+                    </div>
+                </div>
 
         </header>
 
         <nav>
             <ul>
                 <li><a href="#home" class="menu-item" data-i18n="nav_home"><i class="fas fa-home"></i> <span data-i18n="nav_home">Home</span></a></li>
-                <li><a href="#sports" class="menu-item" data-i18n="nav_sports"><i class="fas fa-dumbbell"></i> Sports & Activities</a></li> 
                 
                 <li class="dropdown">
                     <a href="#EngineeringCourse" class="menu-item"><i class="fas fa-Engineering"></i> <span data-i18n="nav_engineering">Engineering Course</span> ▾</a>
@@ -129,11 +132,11 @@
             <section id="EngineeringCourse">
                 <h2 data-i18n="engineering_title"><i class="fas fa-projects"></i> Engineering Course</h2>
                 
-                <div id="projects">
+                <div id="Projects">
                     <h3 data-i18n="projects_title">Projects</h3>
                 </div>
 
-                <div id="productions">
+                <div id="Productions">
                     <h3 data-i18n="productions_title">Productions</h3>
                 </div>
             </section>
@@ -192,8 +195,8 @@
                     <h3 data-i18n="nav_internships">Internships</h3>
                 </div>
 
-                <div id="PPE">
-                    <h3 data-i18n="nav_pep">PPE</h3>
+                <div id="PEP">
+                    <h3 data-i18n="nav_pep">PEP</h3>
                 </div>
             </section>
         </div>
@@ -338,8 +341,9 @@ const translations = {
 };
 
 let currentLang = "en";
-const langBtn = document.getElementById("lang-btn");
+const langToggle = document.getElementById("lang-toggle");
 
+// Applique les traductions à tous les éléments avec data-i18n
 function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -349,16 +353,24 @@ function applyTranslations(lang) {
   });
 }
 
-langBtn.addEventListener("click", () => {
+// ✅ Initialise le joystick selon la langue actuelle
+window.addEventListener("DOMContentLoaded", () => {
   if (currentLang === "en") {
-    applyTranslations("fr");
-    langBtn.textContent = "🇬🇧 EN";
-    currentLang = "fr";
-  } else {
-    applyTranslations("en");
-    langBtn.textContent = "🇫🇷 FR";
-    currentLang = "en";
+    langToggle.classList.add("en"); // position à droite
   }
+  applyTranslations(currentLang);
+});
+
+// ✅ Gérer le clic sur le joystick
+langToggle.addEventListener("click", () => {
+  if (currentLang === "en") {
+    currentLang = "fr";
+    langToggle.classList.remove("en");
+  } else {
+    currentLang = "en";
+    langToggle.classList.add("en");
+  }
+  applyTranslations(currentLang);
 });
 </script>
 </body>
